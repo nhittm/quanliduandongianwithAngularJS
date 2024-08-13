@@ -1,0 +1,35 @@
+<div class="mx-5">
+  <h2>Sửa task</h2>
+  <form #frm1="ngForm" (ngSubmit)="xuly()" 
+class=" mbcol-6 m-auto border border-primary px-3">
+<div class="mb-3">Tên Task
+  <input type="text" name="ten_task" [(ngModel)]="data.ten_task" class="form-control border-primary" style="background-color: rgba(221, 239, 245, 0.922);" placeholder="Nhập tên task">
+</div>
+<div class="mb-3">Dự Án
+  <select name="du_an_id" [(ngModel)]="data.du_an_id"
+  class="form-control border-primary" style="background-color: rgba(221, 239, 245, 0.922);">
+    <option *ngFor="let da of listDuAn" value="{{da.id}}">{{da.ten_du_an}}</option>
+  </select>
+</div>
+  <div class="mb-3">Nhân Viên
+  <select name="nhan_vien_id" [(ngModel)]="data.nhan_vien_id"
+  class="form-control border-primary" style="background-color: rgba(221, 239, 245, 0.922);">
+    <option *ngFor="let nv of listNhanVien" value="{{nv.id}}">{{nv.ho}} {{nv.ten}}</option>
+  </select>
+  </div>
+  <div class="mb-3">Status
+    <input type="number" name="status" [(ngModel)]="data.status" class="form-control border-primary" style="background-color: rgba(221, 239, 245, 0.922);" placeholder="Nhập status">
+  </div>
+  <div class="mb-3">Priority
+    <input type="number" name="priority" [(ngModel)]="data.priority" class="form-control border-primary" style="background-color: rgba(221, 239, 245, 0.922);" placeholder="Nhập priority">
+  </div>
+  <div class="mb-3">Mô Tả
+    <textarea name="mo_ta" [(ngModel)]="data.mo_ta" rows="4"></textarea>
+  </div>
+  <div class="mb-3"> 
+    <button name="btn" class="btn btn-primary px-4" type="submit">Update</button>
+ </div>
+</form>
+</div>
+
+

@@ -1,0 +1,21 @@
+<div class="mx-5">
+    <h2>Danh sách dự án</h2>
+    <table class="table table-bordered border border-primary  ">
+        <tr>
+            <th class="p-2">ID</th>
+            <th class="p-2">Tên Dự Án</th>
+            <th class="p-2">Ngày Bắt Đầu</th>
+            <th class="p-2">Tiền</th>
+            <th class="text-end p-2">Thao tác</th>
+        </tr>
+        <tr *ngFor="let da of list_du_an">
+            <td class="p-2">{{da.id}}</td>
+            <td class="p-2">{{da.ten_du_an}}</td>
+            <td class="p-2">{{da.ngay_start|date:'dd/MM/yyyy'}}</td>
+            <td class="p-2">{{da.tien | number}} VND</td>
+            <td class="text-end p-2" ><button class="btn btn-success" (click)="suaDA(da.id)">Sửa</button><button class="btn btn-danger" (click)="xoaDA(da.id)">Xóa</button></td>
+        </tr>
+    </table>
+</div>
+
+

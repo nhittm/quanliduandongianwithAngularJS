@@ -1,0 +1,33 @@
+<div class="mx-5">
+  <h2>Thêm nhân viên</h2>
+  <form #frm1="ngForm" (ngSubmit)="xuly(frm1.value)" 
+class=" mbcol-6 m-auto border border-primary px-3">
+<div class="mb-3">ID 
+  <input class="form-control border-primary" style="background-color: rgba(221, 239, 245, 0.922);" placeholder="Nhập ID">
+</div>
+<div class="mb-3">Họ
+  <input type="text" name="ho" ngModel class="form-control border-primary" style="background-color: rgba(221, 239, 245, 0.922);" placeholder="Nhập họ">
+</div>
+<div class="mb-3">Tên
+  <input type="text" name="ten" ngModel class="form-control border-primary" style="background-color: rgba(221, 239, 245, 0.922);" placeholder="Nhập tên">
+</div>
+<div class="mb-3">Ngày Sinh
+    <input type="date" name="ngay_sinh" ngModel class="form-control border-primary" style="background-color: rgba(221, 239, 245, 0.922);" placeholder="Nhập ngày sinh">
+  </div>
+  <div class="mb-3">Phái
+    <input type="radio" name="phai" ngModel value="1">Nam
+    <input type="radio" name="phai" ngModel value="0">Nu
+  </div>
+  <div class="mb-3">Khu Vực
+    <select name="khu_vuc" ngModel class="form-control border-primary">
+      <option value="nam">Nam</option>
+      <option value="trung">Trung</option>
+      <option value="bac">Bac</option>
+    </select>
+  </div>
+  <div class="mb-3"> 
+    <button name="btn" class="btn btn-primary px-4" type="submit">Thêm</button>
+ </div>
+</form>
+
+</div>

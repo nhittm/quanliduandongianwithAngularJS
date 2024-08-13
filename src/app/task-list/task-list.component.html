@@ -1,0 +1,23 @@
+<div class="mx-5">
+    <h2 class="">Danh Sách Task</h2>
+    <div *ngFor="let task of list_task" class="mt-2">
+        <div class="ms-1">
+            <b>{{task.ten_task}}</b><br>
+            {{task.mo_ta}}
+        </div>
+        <div class="mb-0 px-3 pb-2 border-bottom border-primary d-fex">
+            <div class="col-6">
+                Priority:{{task.priority}} <br>
+                Status:{{task.status}}
+            </div>
+            <div class="col-6">
+                Nhân Viên:{{task.nhan_vien_id}} <br> 
+                Dự Án:{{task.du_an_id}}
+            </div>
+            <div class="button">
+                <button class="btn btn-success" (click)="suaTask(task.id)">Sửa</button><button class="btn btn-danger" (click)="xoaTask(task.id)">Xóa</button>
+            </div>
+        </div>
+
+    </div>
+</div>

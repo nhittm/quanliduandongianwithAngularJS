@@ -1,0 +1,60 @@
+<div class="container-fluid " >
+  <div class="d-flex" style="min-height: 650px;">
+    <nav id="menuchinh" class="navbar navbar-expand-lg col-md-2 flex-column " >
+      <a class="navbar-brand text-light" href="#" style="position: fixed;top: 0;"><h2>Quản Lý dự án</h2></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0 flex-column ">
+          <li class="nav-item">
+            <a class="nav-link text-light active fs-4" aria-current="page" href="#" routerLink="/">Bảng Điều Khiển</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fs-4" href="#" routerLink="/">Giới Thiệu</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light fs-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Quản Lý Dự Án
+            </a>
+            <ul class="dropdown-menu" style="background-color: bisque;">
+              <li><a class="dropdown-item fs-5" href="#" routerLink="/du_an/them">Thêm Dự Án</a></li>
+              <li><a class="dropdown-item fs-5" href="#" routerLink="/du_an">Danh Sách Dự Án</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light fs-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Quản Lý Task
+            </a>
+            <ul class="dropdown-menu" style="background-color: bisque;">
+              <li><a class="dropdown-item fs-5" href="#" routerLink="/task/them">Thêm Task Mới</a></li>
+              <li><a class="dropdown-item fs-5" href="#" routerLink="/task">Danh Sách Task</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light fs-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Quản Lý Nhân Viên
+            </a>
+            <ul class="dropdown-menu" style="background-color: bisque;">
+              <li><a class="dropdown-item fs-5" href="#" routerLink="/nhan_vien/them">Thêm Nhân Viên</a></li>
+              <li><a class="dropdown-item fs-5" href="#" routerLink="/nhan_vien">Danh Sách Nhân Viên</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  <main class="col-md-10" style="min-height: 300px;">
+    <nav id="thanhmenu" style="height: 60px; ">
+      <form class="d-flex ms-4" role="search">
+      <input class="form-control me-2 mt-3" type="search" placeholder="Từ Khóa">
+      <button class="btn btn-outline-primary mt-3 " type="submit">Search</button>
+      </form>
+    </nav>
+    <article class="  "  id="cottrai">
+      <router-outlet></router-outlet>
+    </article>  
+  </main>
+  <br>
+  </div>
+  <footer class=" text-center m-auto"  style="height: 45px; background-color: rgba(0,212,255,1);"><h4>Trần Thị Mỹ Nhi</h4></footer>
+</div>

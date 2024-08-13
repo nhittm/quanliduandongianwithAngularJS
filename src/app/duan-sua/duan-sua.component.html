@@ -1,0 +1,32 @@
+<form #frm1="ngForm" (ngSubmit)="xuly()" class=" mbcol-6 m-auto border border-primary px-3">
+    <div class="mb-3" >Tên Dự Án
+      <input class="form-control border-primary" style="background-color:  rgba(221, 239, 245, 0.922);" 
+      type="text" name="ten_du_an" [(ngModel)]="data.ten_du_an" placeholder="Nhập tên dự án">
+    </div>
+    <div class="mb-3">Ngày Bắt Đầu
+      <input class="form-control border-primary" style="background-color:  rgba(221, 239, 245, 0.922);" 
+      type="date" name="ngay_start" [(ngModel)]="data.ngay_start" (ngModelChange)="data.ngay_start=$event" placeholder="Nhập ngày">
+    </div>
+    <div class="mb-3">Tiền
+        <input class="form-control border-primary" style="background-color:  rgba(221, 239, 245, 0.922);" 
+        type="number" name="tien"[(ngModel)]="data.tien" placeholder="Nhập số tiền">
+      </div>
+      <div class="mb-3">Leader
+        <select name="leader" [(ngModel)]="data.leader" class="form-control border-primary" 
+        style="background-color:  rgba(221, 239, 245, 0.922);">
+          <option *ngFor="let nv of listNhanVien" value="{{nv.id}}">
+            {{nv.ho}} {{nv.ten}}
+          </option>
+        </select>
+      </div>
+      <div class="mb-3">Thành Viên
+        <select name="thanh_vien" [(ngModel)]="data.thanh_vien" class="form-control border-primary" style="background-color:  rgba(221, 239, 245, 0.922);" multiple size="4">
+          <option *ngFor="let nv of listNhanVien" value="{{nv.id}}">
+            {{nv.ho}} {{nv.ten}}
+          </option>
+        </select>
+      </div>
+    <div class="mb-3"> 
+       <button name="btn" class="btn btn-primary px-4" type="submit">Update</button>
+    </div>
+</form>
